@@ -18,4 +18,4 @@ First stage:
 []Generate 5 different blocks.
     []method to create a block
         uses a hash function to hash a value
-        
+        use timestamp, id and previous hash to generate         new hash?

@@ -10,12 +10,4 @@ public class Blockchain {
 
     //timestamp a block
 
-
-
-
-
-
-
-
-
 }
