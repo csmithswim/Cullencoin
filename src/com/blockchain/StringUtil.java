@@ -1,27 +1,22 @@
 package com.blockchain;
-
-//class that has hashing methods
 import java.security.MessageDigest;
 
-
-public class StringUtil {
+public interface StringUtil {
 
     /* Applies Sha256 to a string and returns a hash. */
-    //Code implementation from Jet Brain's Academy
-    protected static String applySha256(String input){
+    static String applySha256(String input) {
         try {
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
             /* Applies sha256 to our input */
-            byte[] hash = digest.digest(input.getBytes("UTF-8"));
+            byte[]        hash      = digest.digest(input.getBytes("UTF-8"));
             StringBuilder hexString = new StringBuilder();
-            for (byte elem: hash) {
+            for (byte elem : hash) {
                 String hex = Integer.toHexString(0xff & elem);
-                if(hex.length() == 1) hexString.append('0');
+                if (hex.length() == 1) hexString.append('0');
                 hexString.append(hex);
             }
             return hexString.toString();
-        }
-        catch(Exception e) {
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }

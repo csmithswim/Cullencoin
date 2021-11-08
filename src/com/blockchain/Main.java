@@ -3,7 +3,9 @@ package com.blockchain;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println(StringUtil.applySha256("test"));
-	    Program.run();
+	    Blockchain blockchain = new Blockchain();
+        Block block = blockchain.generateBlock();
+        System.out.println(block.toString());
+        Program.run();
     }
 }

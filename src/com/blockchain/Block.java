@@ -14,5 +14,12 @@ public class Block {
         this.hashValue = hashValue;
     }
 
-
+    @Override
+    public String toString() {
+        return "Block{" +
+                "timeStamp=" + timeStamp +
+                ", id=" + id +
+                ", hashValue='" + hashValue + '\'' +
+                '}';
+    }
 }
